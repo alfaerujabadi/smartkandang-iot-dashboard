@@ -1,5 +1,12 @@
 # SmartKandang IoT Dashboard
 
+![Status](https://img.shields.io/badge/status-demo-blue)
+![Tech](https://img.shields.io/badge/tech-HTML%20CSS%20JavaScript-orange)
+![Deployment](https://img.shields.io/badge/deployed-vercel-black)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+# SmartKandang IoT Dashboard
+
 ## Dashboard Preview
 
 ![SmartKandang Dashboard](dashboard-preview.jpg)
