@@ -1,11 +1,14 @@
 # SmartKandang IoT Dashboard
 
-![Status](https://img.shields.io/badge/status-demo-blue)
-![Tech](https://img.shields.io/badge/tech-HTML%20CSS%20JavaScript-orange)
-![Deployment](https://img.shields.io/badge/deployed-vercel-black)
-![License](https://img.shields.io/badge/license-MIT-green)
+![status](https://img.shields.io/badge/status-demo-blue)
+![tech](https://img.shields.io/badge/tech-HTML%20CSS%20JavaScript-orange)
+![deployed](https://img.shields.io/badge/deployed-vercel-black)
+![license](https://img.shields.io/badge/license-MIT-green)
 
-# SmartKandang IoT Dashboard
+🚀 **Live Demo**  
+https://smartkandang-iot-dashboard.vercel.app
+
+---
 
 ## Dashboard Preview
 
@@ -14,28 +17,30 @@
 SmartKandang is a mobile monitoring dashboard for poultry farms.  
 This interface demonstrates how farmers can monitor environmental conditions inside chicken coops in real-time.
 
+---
+
 ## Features
 
 - Real-time livestock monitoring
 - Temperature, humidity, ammonia, and lighting indicators
 - Dashboard overview for multiple cages
 - Early warning for dangerous conditions
+- Alert monitoring system
+- Sensor trend visualization
 
-## Live Demo
+---
 
-https://smartkandang-iot-dashboard.vercel.app
+## System Overview
 
-## Technology
+SmartKandang is designed as an IoT monitoring dashboard for poultry farms.
 
-- HTML
-- CSS
-- JavaScript
-- Deployed with Vercel
+Sensor devices inside the chicken coop collect environmental data such as:
 
-## Purpose
+- Temperature
+- Humidity
+- Ammonia gas
+- Lighting conditions
 
-This project was created as a UI mockup and portfolio demonstration for IoT-based livestock monitoring systems.
+This data is visualized inside a monitoring dashboard so farmers can quickly detect unsafe conditions.
 
-## Author
-
-Alfaeru Jabadi
+Typical architecture:
