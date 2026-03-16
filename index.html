@@ -1,40 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>SmartKandang UI</title>
+<meta charset="UTF-8">
+<title>SmartKandang IoT Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 body{
-font-family:sans-serif;
+margin:0;
+font-family:'DM Sans',sans-serif;
 background:#0a0f1e;
 color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-height:100vh;
+}
+
+header{
+padding:20px;
+font-size:22px;
+font-weight:700;
+border-bottom:1px solid #1e2a45;
+}
+
+.container{
+padding:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.summary{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-bottom:25px;
+}
+
+.summary-card{
+background:#0f1629;
+padding:20px;
+border-radius:14px;
+text-align:center;
+border:1px solid #1e2a45;
+}
+
+.summary-card h2{
+margin:0;
+font-size:28px;
+}
+
+.summary-card p{
+margin:5px 0 0;
+color:#64748b;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:15px;
 }
 
 .card{
 background:#0f1629;
-padding:30px;
-border-radius:16px;
-text-align:center;
-width:300px;
+padding:18px;
+border-radius:14px;
+border:1px solid #1e2a45;
+}
+
+.card-header{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
 }
 
 .status{
-color:#22c55e;
-font-weight:bold;
+font-size:12px;
+font-weight:700;
+padding:4px 8px;
+border-radius:20px;
 }
+
+.normal{
+background:#22c55e22;
+color:#22c55e;
+}
+
+.warning{
+background:#f59e0b22;
+color:#f59e0b;
+}
+
+.danger{
+background:#ef444422;
+color:#ef4444;
+}
+
+.sensors{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+margin-top:10px;
+}
+
+.sensor{
+background:#0a0f1e;
+padding:10px;
+border-radius:10px;
+text-align:center;
+font-size:13px;
+}
+
+.footer{
+text-align:center;
+margin-top:40px;
+color:#64748b;
+font-size:13px;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="card">
-<h2>SmartKandang Dashboard</h2>
-<p>IoT Poultry Monitoring</p>
+<header>
+SmartKandang IoT Monitoring Dashboard
+</header>
 
-<div class="status">
+<div class="container">
+
+<div class="summary">
+
+<div class="summary-card">
+<h2 style="color:#22c55e">2</h2>
+<p>Kandang Normal</p>
+</div>
+
+<div class="summary-card">
+<h2 style="color:#f59e0b">1</h2>
+<p>Kandang Waspada</p>
+</div>
+
+<div class="summary-card">
+<h2 style="color:#ef4444">1</h2>
+<p>Kandang Bahaya</p>
+</div>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<div class="card-header">
+<div>
+<strong>Kandang A1</strong><br>
+<small>Broiler • 5000 ekor</small>
+</div>
+
+<div class="status normal">
+NORMAL
+</div>
+</div>
+
+<div class="sensors">
+<div class="sensor">🌡️ 28.4°C</div>
+<div class="sensor">💧 72%</div>
+<div class="sensor">☁️ 12 ppm</div>
+<div class="sensor">💡 85%</div>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-header">
+<div>
+<strong>Kandang B2</strong><br>
+<small>Layer • 3200 ekor</small>
+</div>
+
+<div class="status danger">
+BAHAYA
+</div>
+</div>
+
+<div class="sensors">
+<div class="sensor">🌡️ 34.1°C</div>
+<div class="sensor">💧 88%</div>
+<div class="sensor">☁️ 28 ppm</div>
+<div class="sensor">💡 60%</div>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-header">
+<div>
+<strong>Kandang C3</strong><br>
+<small>Broiler • 4500 ekor</small>
+</div>
+
+<div class="status warning">
+WASPADA
+</div>
+</div>
+
+<div class="sensors">
+<div class="sensor">🌡️ 30.7°C</div>
+<div class="sensor">💧 76%</div>
+<div class="sensor">☁️ 18 ppm</div>
+<div class="sensor">💡 90%</div>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-header">
+<div>
+<strong>Kandang D4</strong><br>
+<small>Kampung • 2000 ekor</small>
+</div>
+
+<div class="status normal">
+NORMAL
+</div>
+</div>
+
+<div class="sensors">
+<div class="sensor">🌡️ 27.2°C</div>
+<div class="sensor">💧 68%</div>
+<div class="sensor">☁️ 10 ppm</div>
+<div class="sensor">💡 78%</div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+SmartKandang • IoT Poultry Monitoring System
+</div>
+
+</div>
+
+</body>
+</html><div class="status">
 NORMAL
 </div>
 
