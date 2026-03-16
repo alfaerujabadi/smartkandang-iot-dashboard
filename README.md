@@ -1,5 +1,9 @@
 # SmartKandang IoT Dashboard
 
+## Dashboard Preview
+
+![SmartKandang Dashboard](dashboard-preview.png)
+
 SmartKandang is a mobile monitoring dashboard for poultry farms.  
 This interface demonstrates how farmers can monitor environmental conditions inside chicken coops in real-time.
 
