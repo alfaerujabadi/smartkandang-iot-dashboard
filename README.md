@@ -5,7 +5,7 @@
 ![deployed](https://img.shields.io/badge/deployed-vercel-black)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
-🚀 **Live Demo**  
+**Live Demo**  
 https://smartkandang-iot-dashboard.vercel.app
 
 ---
