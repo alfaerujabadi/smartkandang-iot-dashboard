@@ -44,3 +44,42 @@ Sensor devices inside the chicken coop collect environmental data such as:
 This data is visualized inside a monitoring dashboard so farmers can quickly detect unsafe conditions.
 
 Typical architecture:
+IoT Sensors → Gateway / MQTT → Cloud Backend → Monitoring Dashboard
+
+---
+
+## Use Case
+
+SmartKandang helps poultry farmers monitor environmental conditions inside chicken houses.
+
+Benefits include:
+
+- Early detection of heat stress in broiler chickens
+- Monitoring ammonia levels harmful to livestock
+- Tracking humidity affecting chicken health
+- Real-time alerts for dangerous conditions
+
+---
+
+## Technology
+
+- HTML
+- CSS
+- JavaScript
+- Chart.js
+- Vercel (deployment)
+
+---
+
+## Live Demo
+
+https://smartkandang-iot-dashboard.vercel.app
+
+---
+
+## Author
+
+Created by **Alfaeru Jabadi**
+
+GitHub:  
+https://github.com/alfaerujabadi
