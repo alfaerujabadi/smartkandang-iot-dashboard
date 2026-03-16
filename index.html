@@ -7,6 +7,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <style>
 
 body{
@@ -21,6 +23,15 @@ padding:20px;
 font-size:22px;
 font-weight:700;
 border-bottom:1px solid #1e2a45;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.live{
+color:#22c55e;
+font-size:12px;
+font-weight:700;
 }
 
 .container{
@@ -110,6 +121,39 @@ text-align:center;
 font-size:13px;
 }
 
+.alerts{
+margin-top:30px;
+background:#0f1629;
+padding:20px;
+border-radius:14px;
+border:1px solid #1e2a45;
+}
+
+.alert{
+padding:10px;
+border-radius:8px;
+margin-top:10px;
+font-size:14px;
+}
+
+.alert.danger{
+background:#ef444422;
+color:#ef4444;
+}
+
+.alert.warning{
+background:#f59e0b22;
+color:#f59e0b;
+}
+
+.chart{
+margin-top:30px;
+background:#0f1629;
+padding:20px;
+border-radius:14px;
+border:1px solid #1e2a45;
+}
+
 .footer{
 text-align:center;
 margin-top:40px;
@@ -123,7 +167,11 @@ font-size:13px;
 <body>
 
 <header>
+
 SmartKandang IoT Monitoring Dashboard
+
+<div class="live">● LIVE DATA</div>
+
 </header>
 
 <div class="container">
@@ -158,9 +206,7 @@ SmartKandang IoT Monitoring Dashboard
 <small>Broiler • 5000 ekor</small>
 </div>
 
-<div class="status normal">
-NORMAL
-</div>
+<div class="status normal">NORMAL</div>
 </div>
 
 <div class="sensors">
@@ -181,9 +227,7 @@ NORMAL
 <small>Layer • 3200 ekor</small>
 </div>
 
-<div class="status danger">
-BAHAYA
-</div>
+<div class="status danger">BAHAYA</div>
 </div>
 
 <div class="sensors">
@@ -204,9 +248,7 @@ BAHAYA
 <small>Broiler • 4500 ekor</small>
 </div>
 
-<div class="status warning">
-WASPADA
-</div>
+<div class="status warning">WASPADA</div>
 </div>
 
 <div class="sensors">
@@ -227,9 +269,7 @@ WASPADA
 <small>Kampung • 2000 ekor</small>
 </div>
 
-<div class="status normal">
-NORMAL
-</div>
+<div class="status normal">NORMAL</div>
 </div>
 
 <div class="sensors">
@@ -244,22 +284,81 @@ NORMAL
 </div>
 
 
+<div class="alerts">
+
+<h3>⚠️ Alert Monitoring</h3>
+
+<div class="alert danger">
+🚨 Kandang B2 suhu melewati batas aman (34°C)
+</div>
+
+<div class="alert warning">
+⚠️ Kandang C3 kelembaban mendekati batas maksimum
+</div>
+
+</div>
+
+
+<div class="chart">
+
+<h3>Sensor Trend Monitoring</h3>
+
+<canvas id="sensorChart"></canvas>
+
+</div>
+
+
 <div class="footer">
 SmartKandang • IoT Poultry Monitoring System
 </div>
 
 </div>
 
-</body>
-</html><div class="status">
-NORMAL
-</div>
+<script>
 
-<p>Temperature: 28.4°C</p>
-<p>Humidity: 72%</p>
-<p>Ammonia: 12ppm</p>
+const ctx = document.getElementById('sensorChart');
 
-</div>
+new Chart(ctx, {
+type: 'line',
+data: {
+labels: ['00:00','04:00','08:00','12:00','16:00','20:00'],
+datasets: [
+
+{
+label:'Temperature °C',
+data:[26,27,29,31,32,34],
+borderColor:'#ef4444'
+},
+
+{
+label:'Humidity %',
+data:[70,72,74,76,80,88],
+borderColor:'#3b82f6'
+},
+
+{
+label:'Ammonia ppm',
+data:[10,11,12,16,20,28],
+borderColor:'#f59e0b'
+}
+
+]
+},
+options:{
+responsive:true,
+plugins:{
+legend:{
+labels:{color:"white"}
+}
+},
+scales:{
+x:{ticks:{color:"white"}},
+y:{ticks:{color:"white"}}
+}
+}
+});
+
+</script>
 
 </body>
 </html>
